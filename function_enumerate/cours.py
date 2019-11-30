@@ -8,3 +8,4 @@ for i, car in enumerate(cars):
     car.append(price[i])
 print(cars)
 # et on affiche "cars". le prix sera entre dans la liste de liste cars
+# premier test du MAC
