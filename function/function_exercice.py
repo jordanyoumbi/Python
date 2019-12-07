@@ -10,3 +10,6 @@ clean_characters = [".", ",", "'", "\n"]
 replacement = ""
 clean_text = clean_text(text_string, clean_characters, replacement)
 print(cleaned_text)
+
+#Strong exerice
+# Encore un exercice
