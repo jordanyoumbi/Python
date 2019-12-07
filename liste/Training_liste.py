@@ -17,3 +17,6 @@ for row in legislators:
         else:
             name_counts[name] = 1
 print (name_counts)
+
+#fonction None
+# verifier si la valeur de chaque element d' une liste est differante de None
