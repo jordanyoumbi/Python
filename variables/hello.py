@@ -27,3 +27,4 @@ print(type(int_to_str)) # le type que l' on obtiendra ici est un string
 str_to_int = int("2")
 print(str_to_int)
 print(type(str_to_int))
+67e780fcdb41a2ac17f58b66f6a5edfcf1f56f99667bc9990e107df1ad7342d5
