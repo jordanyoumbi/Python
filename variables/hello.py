@@ -27,7 +27,7 @@ print(type(int_to_str)) # le type que l' on obtiendra ici est un string
 str_to_int = int("2")
 print(str_to_int)
 print(type(str_to_int))
-51864875b6716273902c7cd462d6db89a473257bb4bf0e9f018a315250757dc1
-NzE2YTBjNjEtNGM0Yi00NzE3LTliNmItNmEwZmI5Njc3YTA2
-8e559142-3be2-4aaa-8740-9886973a969a
-https://eu-de.appid.cloud.ibm.com/oauth/v4/8e559142-3be2-4aaa-8740-9886973a969a
+f0e705f1-db3c-4921-8c3e-332a43ee0a35.bngflf7f0ktkmkdl3jhg
+ibm_cloud_fa96f6da_65ba_4057_8415_e65e61e478e1
+fa96f6da_65ba_4057_8415_e65e61e478e1
+67e780fcdb41a2ac17f58b66f6a5edfcf1f56f99667bc9990e107df1ad7342d5
