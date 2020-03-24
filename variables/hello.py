@@ -27,4 +27,36 @@ print(type(int_to_str)) # le type que l' on obtiendra ici est un string
 str_to_int = int("2")
 print(str_to_int)
 print(type(str_to_int))
-ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQC1aRXTFkhoxwoVEhSW2ifKgBZhYb+nEKUBJJnxdpLvZ2aWURkg+u3ykfny3Upspu5Rdn4xElbOF2fTsTLo8s/5Vp8HIHTFWKRqbpHcP28qBCw6ryT+vAX2DjAfGc1793zJaYtB5AoWsDc4wbPnRcIqc0bCPeNYgoc/kBkgNpv9TjOXw1rzfu1vDIMdUH/Imusvp//D9ru5hLIdNRchq10XTn7cLvItvsuIJxUrcu24M3djLOtVQyTdnLk12FozUw9mH6TdNLwrnFPN3zGPBMhb8160ewwknUkga1NQBv/dD05n1JVuwyutY6y44CivSIMWnc4maAB983c4CO/I04DH jordanyoumbi@Jordans-MBP
+
+apiVersion: v1
+kind: Service
+metadata:
+  name: xmk-admin-lb-private
+  annotations:
+   service.kubernetes.io/ibm-load-balancer-cloud-provider-ip-type: private
+spec:
+  ports:
+    - protocol: TCP
+      port: 80      
+      targetPort: 80
+  selector:
+    run: xmk-admin-private
+  type: LoadBalancer
+--- 
+apiVersion: extensions/v1beta1
+kind: Deployment
+metadata:
+  name: xmk-admin-dp-private
+spec:
+  replicas: 2
+  template:
+    metadata:
+      labels:
+        run: xmk-admin-private
+    spec:
+      containers:
+      - name: xmk-admin-private
+        image: de.icr.io/xmk-admin/xmk-admin:48-20200320215821
+        ports:
+        - containerPort: 80
+        - containerPort: 443
