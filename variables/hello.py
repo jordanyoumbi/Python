@@ -36,27 +36,16 @@ metadata:
    service.kubernetes.io/ibm-load-balancer-cloud-provider-ip-type: private
 spec:
   ports:
-    - protocol: TCP
-      port: 80      
-      targetPort: 80
-  selector:
-    run: xmk-admin-private
-  type: LoadBalancer
---- 
-apiVersion: extensions/v1beta1
-kind: Deployment
-metadata:
-  name: xmk-admin-dp-private
-spec:
-  replicas: 2
-  template:
-    metadata:
-      labels:
-        run: xmk-admin-private
-    spec:
-      containers:
-      - name: xmk-admin-private
-        image: de.icr.io/xmk-admin/xmk-admin:48-20200320215821
-        ports:
-        - containerPort: 80
-        - containerPort: 443
+    - protocol: TCPnt(type(true_type))
+# convertir un type de donnees
+# str() to int() et vice-versa
+
+int_to_str = str(2)   #ici on a une chaine de caractere dans le str parceque il y a pas les guillements autour de 2
+print(int_to_str)
+print(type(int_to_str)) # le type que l' on obtiendra ici est un string
+
+str_to_int = int("2")
+print(str_to_int)
+print(type(str_to_int))
+e6b669b8edc2537aac73b43bc9809ab7473aa2b6de1e2e8a7411a7c05b786011
+5c2fb766_96fb_42b9_bfec_2aaf0bca7e50
