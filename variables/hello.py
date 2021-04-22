@@ -77,4 +77,3 @@ f8d458ff07e23ca804b43294f775acaca6042b0584602cf0aebb9aa49b83ddd9
 97827ccc-aa8b-49b2-ad13-f0eb8864bf1d.btdl9c3f09gqti6k4svg
 e9dedf8c_0bd5_481c_90ad_ff68774ab878
 32844234a14b403a65465d6bb92aa44e90319df102d0b5d1e25980f4ffda8f9b
-curl -sL https://ibm.biz/install-sysdig-k8s-agent | bash -s -- -a 36fb9149-0803-4cd4-ab8a-a21f08d0bf8d -c ingest.eu-de.monitoring.cloud.ibm.com -ac 'sysdig_capture_enabled: false'
