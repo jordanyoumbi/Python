@@ -77,3 +77,5 @@ f8d458ff07e23ca804b43294f775acaca6042b0584602cf0aebb9aa49b83ddd9
 97827ccc-aa8b-49b2-ad13-f0eb8864bf1d.btdl9c3f09gqti6k4svg
 e9dedf8c_0bd5_481c_90ad_ff68774ab878
 32844234a14b403a65465d6bb92aa44e90319df102d0b5d1e25980f4ffda8f9b
+select  a.third_party_id, a.national_id from xmk.external_offer_targeted_third_party a inner join xmk.touch_point c on (c.code='EDT') inner join xmk.third_party_vs_external_offer_eligibility d on (d.external_offer_targeted_third_party_id = a.id) inner join xmk.external_offer_third_party_touch_point b on (b.touchpoint_id = c.id and b.third_party_vs_external_offer_eligibility_id = d.id)
+;
