@@ -43,3 +43,15 @@ spec:
   - protocol: TCP
     port: 80
     targetPort: 80
+
+      
+ select  a.third_party_id, a.national_id, b.targeting_id, c.code, d.eligible, d.validity_end_date, e.code from xmk.external_offer_targeted_third_party a
+
+   inner join xmk.touch_point c on (c.code='EDT')
+
+   inner join xmk.external_service_offer e on (e.code='CYBER-RISK')
+
+   inner join xmk.third_party_vs_external_offer_eligibility d on (d.external_offer_targeted_third_party_id = a.id and d.external_service_offer_id=e.id and d.eligible=true and d.clinched_partner_journey=false and d.validity_end_date > '2021-03-01')
+
+   inner join xmk.external_offer_third_party_touch_point b on (b.touchpoint_id = c.id and b.third_party_vs_external_offer_eligibility_id = d.id)
+;
