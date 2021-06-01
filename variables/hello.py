@@ -77,3 +77,4 @@ f8d458ff07e23ca804b43294f775acaca6042b0584602cf0aebb9aa49b83ddd9
 97827ccc-aa8b-49b2-ad13-f0eb8864bf1d.btdl9c3f09gqti6k4svg
 e9dedf8c_0bd5_481c_90ad_ff68774ab878
 32844234a14b403a65465d6bb92aa44e90319df102d0b5d1e25980f4ffda8f9b
+curl --insecure --request GET --header 'Content-Type: application/json' --header 'X-B3-TraceId: 1' --header 'X-B3-SpanId: 2' 'http://localhost:8080/xmk/eligibility/v1/eligibility?touchpoint_code=ECC&country_code=FRA&third_party_id=561998'
